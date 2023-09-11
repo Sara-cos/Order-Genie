@@ -1,5 +1,4 @@
-package com.codeFury.product.dao;
-
+package com.tesseract.ordergenie.model;
 
 import java.util.Objects;
 

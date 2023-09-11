@@ -1,4 +1,4 @@
-package com.CodeFury.ui;
+package com.tesseract.ordergenie.model;
 
 import java.util.ArrayList;
 import java.util.Date;
