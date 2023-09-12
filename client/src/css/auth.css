@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.auth {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.auth-image-container {
+  flex: 1;
+  height: 100vh;
+  width: 40%;
+  margin: auto;
+  padding-top: 10%;
+  background-color: blanchedalmond;
+}
+
+.auth-image-container img {
+  display: block;
+  margin: auto;
+  height: 300px;
+  width: auto;
+}
+
+.auth-image-text {
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.auth-form-container {
+  height: 100vh;
+  width: 60%;
+}
+
+.auth-type {
+  position: relative;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 5%;
+  box-shadow: 0 0 20px 10px #FF61241F;
+  border-radius: 24px;
+}
+
+#auth-type-button-holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: wheat;
+  border: none;
+  border-radius: 24px;
+  transition: 0.5s;
+}
+
+.auth-type-button {
+  position: relative;
+  width: 30%;
+  background: transparent;
+  /* background-color: #5F30DF; */
+  font-size: 16px;
+  font-weight: bold;
+  /* color: white; */
+  padding: 16px 24px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.auth-logo-holder {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.logo-image {
+  flex: 1;
+  height: 40px;
+  width: auto;
+  padding-right: 10px;
+}
+
+.logo-text {
+  /* font-size: 36px; */
+  font-weight: bolder;
+  /* color: white; */
+}
+
+.auth-form {
+  width: 60%;
+  margin: auto;
+}
+
+.auth-form label {
+  display: block;
+  text-align: left;
+  font-size: 20px;
+  color: #5F30DF;
+  font-weight: bolder;
+}
+
+.auth-form input {
+  display: inline-block;
+  width: 100%;
+  padding: 16px 24px;
+  margin: 10px 0 12px;
+  border: 1px solid #CCCCCC;
+  border-radius: 24px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.auth-button button {
+  width: 30%;
+  background-color: #5F30DF;
+  font-size: 16px;
+  color: white;
+  padding: 16px 24px;
+  margin: 30px 0;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.auth-button button:hover {
+  background-color: blueviolet;
+}
+
+.success-notification {
+  background: limegreen;
+  color: #FFFFFF;
+  padding: 5px;
+  margin: 5px;
+}
+
+.error-notification {
+  background: orangered;
+  color: #FFFFFF;
+  padding: 5px;
+  margin: 5px;
+}

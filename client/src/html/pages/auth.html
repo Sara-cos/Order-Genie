@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OrderGenie | Authentication</title>
+    <link rel="stylesheet" href="../../css/auth.css" />
+  </head>
+  <body>
+    <div class="auth">
+      <div class="auth-image-container">
+        <img src="../../assets/images/delivery-box.png" alt="auth-image" />
+        <p class="auth-image-text">Take control of your orders and inventory like you're Aladdin!</p>
+      </div>
+      <div class="auth-form-container">
+        <div class="auth-logo-holder">
+          <img class="logo-image" src="../../assets/images/magic-lamp.png" alt="logo" />
+          <h2 class="logo-text">OrderGenie</h2>
+        </div>
+        <div class="auth-type">
+          <button id="auth-type-button-holder" type="button"></button>
+          <button class="auth-type-button" type="button" onclick="customerLogin()">Customer</button>
+          <button class="auth-type-button" type="button" onclick="employeeLogin()">Employee</button>
+        </div>
+        <div class="notification"></div>
+        <form id="customer-form" action="">
+          <div class="auth-form">
+            <label for="customerid-or-name">Customer ID or Name</label>
+            <input type="text" id="customerid-or-name">
+            <label for="password">Password</label>
+            <input type="password" name="customer-password" id="customer-password">
+          </div>
+          <div class="auth-button">
+            <button type="submit">Log In</button>
+          </div>
+        </form>
+        <form id="employee-form" action="">
+          <div class="auth-form">
+            <label for="empid">Employee ID</label>
+            <input type="text" id="empid">
+            <label for="password">Password</label>
+            <input type="password" name="employee-password" id="employee-password">
+          </div>
+          <div class="auth-button">
+            <button type="submit">Log In</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../../js/auth.js"></script>
+  </body>
+</html>

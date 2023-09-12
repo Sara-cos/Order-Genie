@@ -1,0 +1,32 @@
+[
+  {
+    "employeeId": 1001,
+    "username": "employee1",
+    "password": "password1",
+    "employeeLoginStatus": false
+  },
+  {
+    "employeeId": 1002,
+    "username": "employee2",
+    "password": "password2",
+    "employeeLoginStatus": false
+  },
+  {
+    "employeeId": 1003,
+    "username": "employee3",
+    "password": "password3",
+    "employeeLoginStatus": false
+  },
+  {
+    "employeeId": 1004,
+    "username": "employee4",
+    "password": "password4",
+    "employeeLoginStatus": false
+  },
+  {
+    "employeeId": 1005,
+    "username": "employee5",
+    "password": "password5",
+    "employeeLoginStatus": false
+  }
+]
