@@ -1,9 +1,25 @@
 // Simulated JSON data for employee details
-const employeeData = {
-    employeeId: 'EMP12345',
-    company: 'ACME Corporation',
-    lastLoggedIn: 'September 10, 2023, 10:30 AM',
-};
+const data = {
+    "1001": {
+        "Employee_Name": "Jaden Smith",
+        "Company_ID": "DEF234",
+        "Company_Name": "Acme Corporation",
+        "LastLoggedIn" : ["2-09-2023,13:00","5-09-2023,16:40","10-08-2023,15:40"]
+    },
+    "1002": {
+        "Employee_Name": "June Roy",
+        "Company_ID": "DEF237",
+        "Company_Name": "Widget Co.",
+        "LastLoggedIn" : ["2-09-2023,13:00","5-09-2023,16:40"]
+    },
+    "1003": {
+        "Employee_Name": "Alice Johnson",
+        "Company_ID": "DEF789",
+        "Company_Name": "Tech Solutions Inc.",
+        "LastLoggedIn" : ["2-09-2023,13:00","5-09-2023,16:40"]
+    }
+}
+
 
 // Attach event listeners to buttons
 document.getElementById('new-quote').addEventListener('click', function() {
@@ -13,14 +29,6 @@ document.getElementById('new-quote').addEventListener('click', function() {
 // document.getElementById('import-product').addEventListener('click', function() {
 //     alert('Import Product button clicked.');
 // });
-
-// Display employee details
-document.querySelector('.employee-name').textContent = 'John Doe'; // Replace with actual employee name
-document.querySelector('.employee-details').innerHTML = `
-    <p><strong>Employee ID:</strong> ${employeeData.employeeId}</p>
-    <p><strong>Company:</strong> ${employeeData.company}</p>
-    <p><strong>Last Logged In:</strong> ${employeeData.lastLoggedIn}</p>
-`;
 
 
 
@@ -57,27 +65,56 @@ fileInput.addEventListener('change', () => {
 });
 
 
-// Employee Details Fetched from JSON Data-file
-function fetchEmployeeDetails() {
-    fetch('employee.json') // Replace with the path to your JSON file
-        .then(response => response.json())
-        .then(data => {
-            const employeeList = document.getElementById('employeeList');
-            employeeList.innerHTML = ''; // Clear any previous content
+const employeeId = '1001'; // Authenticated ID parsed here ######
+const employeeData = data[employeeId];
+console.log(employeeData)
+        if (employeeData) {
+            // Display individual employee details
+            document.getElementById('employee-name').textContent = employeeData.Employee_Name;
+            document.getElementById('company-id').textContent = employeeData.Company_ID;
+            document.getElementById('company-name').textContent = employeeData.Company_Name;
+            // document.getElementById('last-logged').textContent = employeeData.lastLoggedIn;
+            document.getElementById('employee-id').textContent = "1001";
+            
+            const lastLoggedInList = document.getElementById('last-logged');
+            for (const timestamp of employeeData.LastLoggedIn) {
+                const listItem = document.createElement('li');
+                listItem.textContent = timestamp;
+                lastLoggedInList.appendChild(listItem);
+            }
+        } else {
+            alert('Employee not found.');
+        }
 
-            data.forEach(employee => {
-                const employeeDiv = document.createElement('div');
-                employeeDiv.innerHTML = `
-                    <h2>${employee.name}</h2>
-                    <p>ID: ${employee.id}</p>
-                    <p>Position: ${employee.position}</p>
-                    <p>Email: <a href="mailto:${employee.email}">${employee.email}</a></p>
-                    <hr>
-                `;
-                employeeList.appendChild(employeeDiv);
-            });
-        })
-        .catch(error => {
-            console.error('Error fetching employee data:', error);
-        });
-}
+
+
+// Employee Details Fetched from JSON Data-file
+// fetch('employees_details.json')
+//     .then(response => response.json())
+//     .then(data => {
+
+//         const employeeId = '1001';
+//         const employeeData = data[employeeId];
+//         console.log(employeeData)
+//         // const { employeeId, company, lastLoggedIn, name } = data;
+
+//         // Display employee details individually
+//         if (employeeData) {
+//             // Display individual employee details
+//             document.getElementById('employee-name').textContent = employeeData.Employee_Name;
+//             document.getElementById('company-id').textContent = employeeData.Company_ID;
+//             document.getElementById('company-name').textContent = employeeData.Company_Name;
+//             document.getElementById('last-logged').textContent = employeeData.lastLoggedIn;
+//         } else {
+//             // Employee not found
+//             alert('Employee not found.');
+//         }
+//     })
+//     .catch(error => {
+//         console.error('Error fetching employee details:', error);
+//     });
+
+
+
+
+

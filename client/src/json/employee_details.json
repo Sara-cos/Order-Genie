@@ -1,20 +1,20 @@
-[
-    {
-        "id": 1,
-        "name": "John Doe",
-        "position": "Software Developer",
-        "email": "john.doe@example.com"
+{
+    "1001": {
+        "Employee_Name": "Jaden Smith",
+        "Company_ID": "DEF234",
+        "Company_Name": "Acme Corporation",
+        "LastLoggedIn" : ["2-09-2023,13:00","5-09-2023,16:40","10-08-2023,15:40"] 
     },
-    {
-        "id": 2,
-        "name": "Jane Smith",
-        "position": "UX Designer",
-        "email": "jane.smith@example.com"
+    "1002": {
+        "Employee_Name": "June Roy",
+        "Company_ID": "DEF237",
+        "Company_Name": "Widget Co.",
+        "LastLoggedIn" : ["2-09-2023,13:00","5-09-2023,16:40"]
     },
-    {
-        "id": 3,
-        "name": "Bob Johnson",
-        "position": "Project Manager",
-        "email": "bob.johnson@example.com"
+    "1003": {
+        "Employee_Name": "Alice Johnson",
+        "Company_ID": "DEF789",
+        "Company_Name": "Tech Solutions Inc.",
+        "LastLoggedIn" : ["2-09-2023,13:00","5-09-2023,16:40"]
     }
-]
+}

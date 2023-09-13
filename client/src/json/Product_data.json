@@ -1,0 +1,34 @@
+{
+    "products": [
+        {
+            "ProductId": "P1001",
+            "Name": "Smartphone",
+            "Category": "Level 1"
+        },
+        {
+            "ProductId": "P1002",
+            "Name": "Laptop",
+            "Category": "Level 1"
+        },
+        {
+            "ProductId": "P1003",
+            "Name": "Earphones",
+            "Category": "Level 2"
+        },
+        {
+            "ProductId": "P1004",
+            "Name": "Running Shoes",
+            "Category": "Level 2"
+        },
+        {
+            "ProductId": "P1005",
+            "Name": "Tennis Racket",
+            "Category": "Level 3"
+        },
+        {
+            "ProductId": "P1006",
+            "Name": "Coffee Maker",
+            "Category": "Level 3"
+        }
+    ]
+}
