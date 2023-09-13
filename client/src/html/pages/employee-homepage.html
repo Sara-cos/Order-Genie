@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee-homepage</title>
+    <link rel="stylesheet" href="../../css/employee.css">
+</head>
+<body>
+    <div class="flex-container">
+        <div class="employee-options-container">
+            <h1 style="padding: 30px;"><strong>Order Management Page</strong></h1>
+            <div>
+                <button id="new-quote" class="button">New Quote</button>
+            </div>
+            <div>
+                <button id="import-product" class="button">Import Product</button>
+                <input type="file" id="fileInput" style="display:none;">
+            </div>
+        </div>
+        <div class="content">
+            <div class="employee-card-container">
+                <div class="employee-header">
+                    <div class="employee-initials">JD</div>
+                    <div class="employee-name">John Doe</div>
+                </div>
+                <div class="employee-details">
+                    <div id="employeeDetailsContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/employee.js"></script>
+    
+</body>
+</html>

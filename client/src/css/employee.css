@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Global styles */
+body {
+    background-color: blanchedalmond;
+}
+
+.flex-container {
+    display: flex;
+    height: 100vh;
+    background-color: #fff;
+    justify-content: space-between;
+}
+
+/* Sidebar styles */
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(244, 197, 110);
+    border: none;
+    color: #fff;
+    text-align: left;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #777777;
+}
+
+/* Content styles */
+.content {
+    padding: 20px;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+
+.employee-card-container {
+    flex: 2;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(244, 197, 110);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.employee-options-container {
+    flex: 1;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgb(244, 197, 110);
+    padding: 50px;
+    border-radius: 5px;
+    text-align: center;
+    align-content: center;
+    width: 70%;
+
+}
+
+.employee-initials {
+    background-color:rgb(244, 197, 110);
+    color: #fff;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+
+.employee-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.employee-details {
+    font-size: 16px;
+}

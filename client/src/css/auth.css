@@ -53,7 +53,7 @@
   left: 0;
   height: 100%;
   width: 50%;
-  background: wheat;
+  background: rgb(248, 210, 138);
   border: none;
   border-radius: 24px;
   transition: 0.5s;
@@ -105,7 +105,7 @@
   display: block;
   text-align: left;
   font-size: 20px;
-  color: #5F30DF;
+  color: rgb(248, 210, 138);
   font-weight: bolder;
 }
 
@@ -122,7 +122,7 @@
 
 .auth-button button {
   width: 30%;
-  background-color: #5F30DF;
+  background-color: rgb(248, 210, 138);
   font-size: 16px;
   color: white;
   padding: 16px 24px;
@@ -133,7 +133,7 @@
 }
 
 .auth-button button:hover {
-  background-color: blueviolet;
+  background-color: rgb(255, 201, 102);
 }
 
 .success-notification {
