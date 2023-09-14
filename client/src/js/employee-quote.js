@@ -1,5 +1,5 @@
-import quotes from "../json/quotes.json" assert { type: "json" };
-const dummyData = quotes;
+import data from "../json/quotes.json" assert { type: "json" };
+const dummyData = data;
 
 function createQuoteCard(quote) {
   // Create the quote card container

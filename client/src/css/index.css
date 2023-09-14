@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background-color: blanchedalmond;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.hero-section-genie {
+  display: flex;
+  flex: 1;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section-text {
+  margin: auto;
+  padding: 50px 0;
+  width: 60%;
+  text-align: center;
+  background-color: white;
+  border-radius: 24px;
+}
+
+.hero-section-text p {
+  margin: auto;
+  line-height: 4rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: coral;
+}
+
+.hero-section-genie img {
+  height: 70%;
+  width: 70%;
+}
+
+.footer-container {
+  color: #eeeeee;
+  height: fit-content;
+  margin-top: 150px;
+  padding: 30px;
+  font-family: cursive;
+  font-size: large;
+  font-weight: 400;
+  background-color: burlywood;
+  overflow: hidden;
+  line-height: 2rem;
+}
+
+.footer-container a {
+  color: #eedffa;
+  text-decoration: none;
+}
+
+.footer-container a:hover {
+  color: slategray;
+  text-decoration: none;
+}
+
+.footer-left {
+  float: left;
+  text-align: center;
+  width: 33.3%;
+}
+
+.footer-middle {
+  float: left;
+  text-align: center;
+  width: 33.3%;
+}
+
+.footer-right {
+  float: right;
+  text-align: center;
+  width: 33.3%;
+}
