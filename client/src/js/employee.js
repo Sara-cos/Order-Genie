@@ -65,54 +65,57 @@ fileInput.addEventListener('change', () => {
 });
 
 
-const employeeId = '1001'; // Authenticated ID parsed here ######
-const employeeData = data[employeeId];
-console.log(employeeData)
-        if (employeeData) {
-            // Display individual employee details
-            document.getElementById('employee-name').textContent = employeeData.Employee_Name;
-            document.getElementById('company-id').textContent = employeeData.Company_ID;
-            document.getElementById('company-name').textContent = employeeData.Company_Name;
-            // document.getElementById('last-logged').textContent = employeeData.lastLoggedIn;
-            document.getElementById('employee-id').textContent = "1001";
-            
-            const lastLoggedInList = document.getElementById('last-logged');
-            for (const timestamp of employeeData.LastLoggedIn) {
-                const listItem = document.createElement('li');
-                listItem.textContent = timestamp;
-                lastLoggedInList.appendChild(listItem);
-            }
-        } else {
-            alert('Employee not found.');
-        }
-
-
-
-// Employee Details Fetched from JSON Data-file
-// fetch('employees_details.json')
-//     .then(response => response.json())
-//     .then(data => {
-
-//         const employeeId = '1001';
-//         const employeeData = data[employeeId];
-//         console.log(employeeData)
-//         // const { employeeId, company, lastLoggedIn, name } = data;
-
-//         // Display employee details individually
+// const urlParams = new URLSearchParams(window.location.search);
+// const empId = urlParams.get('empId');
+// const employeeId = '1002'; // Authenticated ID parsed here ######
+// const employeeData = data[employeeId];
+// console.log(employeeData)
 //         if (employeeData) {
 //             // Display individual employee details
 //             document.getElementById('employee-name').textContent = employeeData.Employee_Name;
 //             document.getElementById('company-id').textContent = employeeData.Company_ID;
 //             document.getElementById('company-name').textContent = employeeData.Company_Name;
-//             document.getElementById('last-logged').textContent = employeeData.lastLoggedIn;
+//             // document.getElementById('last-logged').textContent = employeeData.lastLoggedIn;
+//             document.getElementById('employee-id').textContent = "1001";
+            
+//             const lastLoggedInList = document.getElementById('last-logged');
+//             for (const timestamp of employeeData.LastLoggedIn) {
+//                 const listItem = document.createElement('li');
+//                 listItem.textContent = timestamp;
+//                 lastLoggedInList.appendChild(listItem);
+//             }
 //         } else {
-//             // Employee not found
 //             alert('Employee not found.');
 //         }
-//     })
-//     .catch(error => {
-//         console.error('Error fetching employee details:', error);
-//     });
+
+
+
+// Employee Details Fetched from JSON Data-file
+fetch('src/json/employees_details.json')
+    .then(response => response.json())
+    .then(data => {
+
+        const employeeId = '1002';
+        const employeeData = data[employeeId];
+        console.log(employeeData)
+        // const { employeeId, company, lastLoggedIn, name } = data;
+
+        // Display employee details individually
+        if (employeeData) {
+            // Display individual employee details
+            document.getElementById('employee-name').textContent = employeeData.Employee_Name;
+            document.getElementById('company-id').textContent = employeeData.Company_ID;
+            document.getElementById('company-name').textContent = employeeData.Company_Name;
+            document.getElementById('last-logged').textContent = employeeData.lastLoggedIn;
+        } else {
+            // Employee not found
+            alert('Employee not found.');
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching employee details:', error);
+    });
+
 
 
 

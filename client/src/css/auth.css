@@ -53,7 +53,7 @@
   left: 0;
   height: 100%;
   width: 50%;
-  background: rgb(248, 210, 138);
+  background: rgb(255, 201, 102);
   border: none;
   border-radius: 24px;
   transition: 0.5s;
@@ -66,7 +66,7 @@
   /* background-color: #5F30DF; */
   font-size: 16px;
   font-weight: bold;
-  /* color: white; */
+  color: rgb(255, 231, 188);
   padding: 16px 24px;
   border: none;
   border-radius: 24px;
@@ -93,7 +93,7 @@
 .logo-text {
   /* font-size: 36px; */
   font-weight: bolder;
-  /* color: white; */
+  color: rgb(255, 201, 102);
 }
 
 .auth-form {
@@ -105,7 +105,8 @@
   display: block;
   text-align: left;
   font-size: 20px;
-  color: rgb(248, 210, 138);
+  color: rgb(255, 201, 102);
+  /*rgb(248, 210, 138);*/
   font-weight: bolder;
 }
 
@@ -122,7 +123,8 @@
 
 .auth-button button {
   width: 30%;
-  background-color: rgb(248, 210, 138);
+  background-color: #ffc966; 
+  /*rgb(248, 210, 138);*/
   font-size: 16px;
   color: white;
   padding: 16px 24px;
@@ -133,11 +135,11 @@
 }
 
 .auth-button button:hover {
-  background-color: rgb(255, 201, 102);
+  background-color: #fad99d;
 }
 
 .success-notification {
-  background: limegreen;
+  background: rgb(208, 231, 59);
   color: #FFFFFF;
   padding: 5px;
   margin: 5px;

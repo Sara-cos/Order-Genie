@@ -21,6 +21,8 @@ customerLogin();
 
 const customerUsername = document.querySelector("#customerid-or-name");
 const customerPassword = document.querySelector("#customer-password");
+console.log(customerUsername)
+console.log(customerPassword)
 const notification = document.querySelector('.notification');
 
 customerForm.addEventListener("submit", onSubmit);
