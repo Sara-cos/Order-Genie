@@ -3,10 +3,12 @@ package com.tesseract.ordergenie.model;
 import java.util.Objects;
 
 public class Company {
-      private String companyName;
-      private String companyAddress;
-      private String companyCity;
-      private String companyGstNumber;
+
+	private String companyName;
+    private String companyAddress;
+    private String companyCity;
+    private String companyGstNumber;
+    
 	public String getCompanyName() {
 		return companyName;
 	}

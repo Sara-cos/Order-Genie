@@ -1,9 +1,11 @@
 package com.tesseract.ordergenie.model;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Customer {
-	 private int customer;
+
+	private int customerId;
 	 private String customerName;
 	 private String customerGstNumber;
 	 private String customerAddress;
@@ -11,12 +13,34 @@ public class Customer {
 	 private String email;
 	 private long phone;
 	 private int pincode;
-   boolean customerLoginStatus;
-public int getCustomer() {
-	return customer;
+	 private String password;
+	 private double totalAmountPaid;
+	 public List<Product> getProductList() {
+		return productList;
+	}
+	public void setProductList(List<Product> productList) {
+		this.productList = productList;
+	}
+	private List<Product> productList;
+	 
+  public double getTotalAmountPaid() {
+		return totalAmountPaid;
+	}
+	public void setTotalAmountPaid(double totalAmountPaid) {
+		this.totalAmountPaid = totalAmountPaid;
+	}
+public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+boolean customerLoginStatus;
+public int getCustomerId() {
+	return customerId;
 }
-public void setCustomer(int customer) {
-	this.customer = customer;
+public void setCustomerId(int customerId) {
+	this.customerId = customerId;
 }
 public String getCustomerName() {
 	return customerName;
@@ -68,15 +92,15 @@ public void setCustomerLoginStatus(boolean customerLoginStatus) {
 }
 @Override
 public String toString() {
-	return "Customer [customer=" + customer + ", customerName=" + customerName + ", customerGstNumber="
+	return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerGstNumber="
 			+ customerGstNumber + ", customerAddress=" + customerAddress + ", CustomerCity=" + CustomerCity + ", email="
-			+ email + ", phone=" + phone + ", pincode=" + pincode + ", customerLoginStatus=" + customerLoginStatus
-			+ "]";
+			+ email + ", phone=" + phone + ", pincode=" + pincode + ", customerLoginStatus=" + "customerLoginStatus= "
+			+"totalAmountPaid= " +"]";
 }
 @Override
 public int hashCode() {
-	return Objects.hash(CustomerCity, customer, customerAddress, customerGstNumber, customerLoginStatus, customerName,
-			email, phone, pincode);
+	return Objects.hash(CustomerCity, customerId, customerAddress, customerGstNumber, customerLoginStatus, customerName,
+			email, phone, pincode,totalAmountPaid);
 }
 @Override
 public boolean equals(Object obj) {
@@ -87,16 +111,16 @@ public boolean equals(Object obj) {
 	if (getClass() != obj.getClass())
 		return false;
 	Customer other = (Customer) obj;
-	return Objects.equals(CustomerCity, other.CustomerCity) && customer == other.customer
+	return Objects.equals(CustomerCity, other.CustomerCity) && customerId == other.customerId
 			&& Objects.equals(customerAddress, other.customerAddress)
 			&& Objects.equals(customerGstNumber, other.customerGstNumber)
 			&& customerLoginStatus == other.customerLoginStatus && Objects.equals(customerName, other.customerName)
-			&& Objects.equals(email, other.email) && phone == other.phone && pincode == other.pincode;
+			&& Objects.equals(email, other.email) && phone == other.phone && pincode == other.pincode&& totalAmountPaid == other.totalAmountPaid;
 }
 public Customer(int customer, String customerName, String customerGstNumber, String customerAddress,
-		String customerCity, String email, long phone, int pincode, boolean customerLoginStatus) {
+		String customerCity, String email, long phone, int pincode, boolean customerLoginStatus,double totalAmountPaid) {
 	super();
-	this.customer = customer;
+	this.customerId = customerId;
 	this.customerName = customerName;
 	this.customerGstNumber = customerGstNumber;
 	this.customerAddress = customerAddress;
@@ -105,10 +129,10 @@ public Customer(int customer, String customerName, String customerGstNumber, Str
 	this.phone = phone;
 	this.pincode = pincode;
 	this.customerLoginStatus = customerLoginStatus;
+	this.totalAmountPaid=totalAmountPaid;
 }
 public Customer() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-
 }
