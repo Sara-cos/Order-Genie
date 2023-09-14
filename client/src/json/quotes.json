@@ -1,0 +1,76 @@
+{
+  "quotes": [
+    {
+      "quoteId": "1001",
+      "quoteAmount": 250.50,
+      "quoteStatus": "Complete",
+      "customerName": "John Doe",
+      "customerCity": "New York",
+      "orderDate": "2023-09-01"
+    },
+    {
+      "quoteId": "1002",
+      "quoteAmount": 150.25,
+      "quoteStatus": "Pending",
+      "customerName": "Alice Smith",
+      "customerCity": "Los Angeles",
+      "orderDate": "2023-09-02"
+    },
+    {
+      "quoteId": "1003",
+      "quoteAmount": 300.75,
+      "quoteStatus": "Expired",
+      "customerName": "Bob Johnson",
+      "customerCity": "Chicago",
+      "orderDate": "2023-08-28"
+    },
+    {
+      "quoteId": "1004",
+      "quoteAmount": 180.80,
+      "quoteStatus": "Complete",
+      "customerName": "Mary Brown",
+      "customerCity": "Houston",
+      "orderDate": "2023-08-30"
+    },
+    {
+      "quoteId": "1005",
+      "quoteAmount": 250.50,
+      "quoteStatus": "Complete",
+      "customerName": "John Doe",
+      "customerCity": "New York",
+      "orderDate": "2023-09-01"
+    },
+    {
+      "quoteId": "1006",
+      "quoteAmount": 150.25,
+      "quoteStatus": "Pending",
+      "customerName": "Alice Smith",
+      "customerCity": "Los Angeles",
+      "orderDate": "2023-09-02"
+    },
+    {
+      "quoteId": "1007",
+      "quoteAmount": 300.75,
+      "quoteStatus": "Expired",
+      "customerName": "Bob Johnson",
+      "customerCity": "Chicago",
+      "orderDate": "2023-08-28"
+    },
+    {
+      "quoteId": "1008",
+      "quoteAmount": 180.80,
+      "quoteStatus": "Complete",
+      "customerName": "Mary Brown",
+      "customerCity": "Houston",
+      "orderDate": "2023-08-30"
+    },
+    {
+      "quoteId": "1009",
+      "quoteAmount": 180.80,
+      "quoteStatus": "Complete",
+      "customerName": "Mary Brown",
+      "customerCity": "Houston",
+      "orderDate": "2023-08-30"
+    }
+  ]
+}
