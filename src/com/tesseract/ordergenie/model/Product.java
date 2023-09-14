@@ -1,24 +1,25 @@
 package com.tesseract.ordergenie.model;
 
+
 import java.util.Objects;
 
 public class Product {
 	 private int productId;
 	 private  String productName;
 	 private double productPrice;
-	 private int Category;
-	 private double productGst;
+	 private String Category;
+	// private double productGst;
 	 private int productStock;
 	 private int quantity;
-	public Product(int productId, String productName, double productPrice, int category, double productGst,
-			int productStock, int quantity) {
+	public Product(int productId, String productName, double productPrice, String category,
+			 int quantity) {
 		super();
 		this.productId = productId;
 		this.productName = productName;
 		this.productPrice = productPrice;
 		Category = category;
-		this.productGst = productGst;
-		this.productStock = productStock;
+		//this.productGst = productGst;
+		
 		this.quantity = quantity;
 	}
 	public int getQuantity() {
@@ -35,11 +36,11 @@ public class Product {
 	@Override
 	public String toString() {
 		return "Product [productId=" + productId + ", productName=" + productName + ", productPrice=" + productPrice
-				+ ", Category=" + Category + ", productGst=" + productGst + ", productStock=" + productStock + "]";
+				+ ", Category=" + Category  + ", productStock=" + productStock + "]";
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(Category, productGst, productId, productName, productPrice, productStock, quantity);
+		return Objects.hash(Category, productId, productName, productPrice, productStock, quantity);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -51,7 +52,7 @@ public class Product {
 			return false;
 		Product other = (Product) obj;
 		return Category == other.Category
-				&& Double.doubleToLongBits(productGst) == Double.doubleToLongBits(other.productGst)
+				
 				&& productId == other.productId && Objects.equals(productName, other.productName)
 				&& Double.doubleToLongBits(productPrice) == Double.doubleToLongBits(other.productPrice)
 				&& productStock == other.productStock && quantity == other.quantity;
@@ -74,18 +75,18 @@ public class Product {
 	public void setProductPrice(double productPrice) {
 		this.productPrice = productPrice;
 	}
-	public int getCategory() {
+	public String getCategory() {
 		return Category;
 	}
-	public void setCategory(int category) {
+	public void setCategory(String category) {
 		Category = category;
 	}
-	public double getProductGst() {
-		return productGst;
-	}
-	public void setProductGst(double productGst) {
-		this.productGst = productGst;
-	}
+//	public double getProductGst() {
+//		return productGst;
+//	}
+//	public void setProductGst(double productGst) {
+//		this.productGst = productGst;
+//	}
 	public int getProductStock() {
 		return productStock;
 	}
