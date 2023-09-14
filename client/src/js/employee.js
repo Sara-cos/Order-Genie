@@ -54,18 +54,18 @@ fileInput.addEventListener('change', () => {
     }
 });
 
+// fetching the empID from URL
+const urlParams = new URLSearchParams(window.location.search);
+const empId = urlParams.get('empId');
 
-// const urlParams = new URLSearchParams(window.location.search);
-// const empId = urlParams.get('empId');
-
-const employeeId = '1001'; // Authenticated ID parsed here
+const employeeId = empId; // Authenticated ID parsed here
 const employeeData = data[employeeId];
 console.log(employeeData)
 if (employeeData) {
     document.getElementById('employee-name').textContent = employeeData.Employee_Name;
     document.getElementById('company-id').textContent = employeeData.Company_ID;
     document.getElementById('company-name').textContent = employeeData.Company_Name;
-    document.getElementById('employee-id').textContent = "1001";
+    document.getElementById('employee-id').textContent = empId;
             
     const lastLoggedInList = document.getElementById('last-logged');
     for (const timestamp of employeeData.LastLoggedIn) {
