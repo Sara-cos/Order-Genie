@@ -1,7 +1,5 @@
 package com.tesseract.ordergenie.service;
 
-import com.tesseract.ordergenie.exception.*;
-import com.tesseract.ordergenie.model.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -12,6 +10,9 @@ import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.HashMap;
 
+import com.tesseract.ordergenie.exception.EmployeeDoesNotExistException;
+import com.tesseract.ordergenie.model.LoggedInDetails;
+
 public class EmployeeService {
 
     HashMap<Integer,LoggedInDetails> loggedIn=new HashMap<>();
@@ -21,7 +22,7 @@ public class EmployeeService {
     {
 
         String dbUrl="jdbc:mysql://localhost:3306/order-genie";
-        String username="root",password="123456";
+        String username="root",password="Parag@1967";
         try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");

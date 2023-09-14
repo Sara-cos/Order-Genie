@@ -1,8 +1,8 @@
 package com.tesseract.ordergenie.model;
 
+import com.tesseract.ordergenie.model.*;
+
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.HashMap;
 
 public class LoggedInDetails {
     Employee e=new Employee();
