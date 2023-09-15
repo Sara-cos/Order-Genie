@@ -86,7 +86,7 @@ public class OrderService {
     Order o = new Order();
 
     public double totalShippingCost() {
-        ProductJdbc pj = new ProductJdbc();
+        ProductService pj = new ProductService();
         double totalSC = 0.0;
         if (o.getOrderValue() > 100000) {
             o.setShippingCost(0);
