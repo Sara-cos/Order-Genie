@@ -152,40 +152,37 @@ customerForm.addEventListener('submit', function (e) {
   if (customer) {
       // Successful login, redirects
       const customerId = customer.customer_id;
-      window.location.href = `../pages/customer-homepage.html?customerId=${customerId}`;
+      window.location.href = `../pages/shop.html?customerId=${customerId}`;
   } else {
       errorMessage.textContent = 'Invalid username or password. Please try again.';
   }
 });
 
+const notification = document.querySelector('.notification');
 
-// console.log(customerUsername)
-// console.log(customerPassword)
-// const notification = document.querySelector('.notification');
+customerForm.addEventListener("submit", onSubmit);
 
-// customerForm.addEventListener("submit", onSubmit);
+function onSubmit(e) {
+  e.preventDefault();
+  if (customerUsername.value === "" || customerPassword.value === "") {
+    // alert("Please enter all fields!");
+    notification.classList.add("error-notification");
+    notification.innerHTML = "Please enter all fields!";
+    notification.style.display = "block"; // Show the message
+    setTimeout(() => {
+      notification.style.display = "none"; // Hide the msg div
+    }, 3000);
+  } else {
+    notification.classList.add("success-notification");
+    notification.innerHTML = "Validation successful!";
+    notification.style.display = "block"; // Show the message
+    setTimeout(() => {
+      notification.style.display = "none"; // Hide the msg div
+    }, 3000);
+    // alert("Registration successful!");
 
-// function onSubmit(e) {
-//   e.preventDefault();
-//   if (customerUsername.value === "" || customerPassword.value === "") {
-//     // alert("Please enter all fields!");
-//     notification.classList.add("error-notification");
-//     notification.innerHTML = "Please enter all fields!";
-//     notification.style.display = "block"; // Show the message
-//     setTimeout(() => {
-//       notification.style.display = "none"; // Hide the msg div
-//     }, 3000);
-//   } else {
-//     notification.classList.add("success-notification");
-//     notification.innerHTML = "Validation successful!";
-//     notification.style.display = "block"; // Show the message
-//     setTimeout(() => {
-//       notification.style.display = "none"; // Hide the msg div
-//     }, 3000);
-//     // alert("Registration successful!");
-
-//     // Clear fields
-//     customerUsername.value = "";
-//     customerPassword.value = "";
-//   }
-// }
+    // Clear fields
+    customerUsername.value = "";
+    customerPassword.value = "";
+  }
+}

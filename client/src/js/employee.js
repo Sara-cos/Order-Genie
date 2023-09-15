@@ -23,7 +23,7 @@ const data = {
 
 
 document.getElementById('new-quote').addEventListener('click', function() {
-    alert('New Quote button clicked.');
+    window.location.href = '../pages/employee-order-management.html';
 });
 
 
