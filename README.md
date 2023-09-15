@@ -17,6 +17,10 @@ Each have their separate dashboards and roles when it comes to using the applica
 5. Employee - View Quotes and Orders
 6. Employee - Create Quote
 
+## Java Backend
+
+Follows layered architecure and implements DAO layer using JDBC and MySQL
+
 ### client : The frontend code
 ### server/src : The backend code
 
