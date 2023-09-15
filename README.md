@@ -19,3 +19,13 @@ Each have their separate dashboards and roles when it comes to using the applica
 
 ### client : The frontend code
 ### server/src : The backend code
+
+### Made with ❤️ by:
+Alfiya M J
+Prasansha Satpathy
+Shakti Ashutosh Panda
+Shivanshita Tiwari
+Shruti Mate
+Sidhant Narula
+Sneha Pritmani
+Ujjwal Gupta
